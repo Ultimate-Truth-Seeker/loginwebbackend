@@ -12,7 +12,7 @@ func configureCORS() func(http.Handler) http.Handler {
     corsMiddleware := cors.New(cors.Options{
         // Permitir orígenes específicos (ej. donde corre su frontend)
         // Usar "*" es inseguro para producción.
-        AllowedOrigins:   []string{"*", "http://localhost:5500", "http://127.0.0.1:5500"}, // Añadir origen de Live Server si lo usan
+        AllowedOrigins:   []string{"*", "http://localhost:5500", "http://127.0.0.1:5500", "http://localhost/frontend/index.html", "file:///Users/macbookproroberto/Documents/loginweb/index.html"}, // Añadir origen de Live Server si lo usan
         AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
         AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
         ExposedHeaders:   []string{"Link"},
